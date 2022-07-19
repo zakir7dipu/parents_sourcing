@@ -1,0 +1,25 @@
+        <section class="product-shop spad">
+            <div class="container">
+                <div class="row">
+                    {% if products|length %}
+                        {% for product in products %}
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="product-item">
+                                    <div class="pi-pic">
+                                        <img src="{{product.image}}" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+
+                    {% else %}
+                        <h4 class="text-center">No Product Found</h4>
+                    {% endif %}
+                </div>
+                {% if products|length %}
+                <div class="pagination_container">
+                {{ products.render|raw }}
+                </div>
+                {% endif %}
+            </div>
+        </section>

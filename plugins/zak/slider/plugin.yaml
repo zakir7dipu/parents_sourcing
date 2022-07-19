@@ -1,0 +1,17 @@
+plugin:
+    name: 'zak.slider::lang.plugin.name'
+    description: 'zak.slider::lang.plugin.description'
+    author: zak
+    icon: wn-icon-slideshare
+    replaces: {  }
+permissions:
+    slider_access:
+        tab: 'zak.slider::lang.plugin.name'
+        label: 'Slider Access'
+navigation:
+    main-menu-item:
+        label: 'zak.slider::lang.plugin.name'
+        url: zak/slider/slidercontroller
+        icon: icon-slideshare
+        permissions:
+            - slider_access

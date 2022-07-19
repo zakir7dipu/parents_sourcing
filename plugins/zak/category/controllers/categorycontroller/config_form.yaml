@@ -1,0 +1,11 @@
+name: CategoryController
+modelClass: Zak\Category\Models\Category
+form: $/zak/category/models/category/category_fields.yaml
+defaultRedirect: zak/category/categorycontroller
+create:
+    redirect: 'zak/category/categorycontroller/update/:id'
+    redirectClose: zak/category/categorycontroller
+update:
+    redirect: zak/category/categorycontroller
+    redirectClose: zak/category/categorycontroller
+preview: {  }

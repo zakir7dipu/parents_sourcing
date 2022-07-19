@@ -1,0 +1,9 @@
+columns:
+    image:
+        label: Image
+        type: text
+        searchable: true
+    insta_link:
+        label: 'Instagram Link'
+        type: text
+        searchable: true

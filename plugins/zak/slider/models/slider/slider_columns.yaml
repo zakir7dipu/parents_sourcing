@@ -1,0 +1,12 @@
+columns:
+    image:
+        label: 'Image Link'
+        type: text
+    heading:
+        label: Heading
+        type: text
+        searchable: true
+    sub_heading:
+        label: 'Sub Heading'
+        type: text
+        searchable: true

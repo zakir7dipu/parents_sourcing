@@ -1,0 +1,16 @@
+fields:
+    heading:
+        label: Heading
+        span: auto
+        required: 1
+        type: text
+    sub_heading:
+        label: 'Sub Heading'
+        span: auto
+        required: 1
+        type: text
+    image:
+        label: 'Image (Size will be 1920px X 728px)'
+        span: full
+        required: 1
+        type: text

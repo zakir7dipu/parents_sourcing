@@ -1,0 +1,26 @@
+fields:
+    index:
+        label: Index
+        span: auto
+        required: 1
+        type: number
+    name:
+        label: Name
+        span: auto
+        required: 1
+        type: text
+    slug:
+        label: Slug
+        span: auto
+        required: 1
+        type: text
+    status:
+        label: Status
+        span: auto
+        required: 1
+        type: switch
+    image:
+        label: Image
+        span: full
+        required: 1
+        type: text

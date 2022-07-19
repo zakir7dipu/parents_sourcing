@@ -1,0 +1,91 @@
+<section class="women-banner spad">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="product-large set-bg" data-setbg="{{ 'assets/img/products/women-large.jpg'|theme }}">
+<!--                         <h2>Women’s</h2> -->
+<!--                         <a href="#">Discover More</a> -->
+                    </div>
+                </div>
+                <div class="col-lg-8 offset-lg-1">
+                    <div class="filter-control" id="filterGallery">
+                        <ul>
+                        {% if categories|length %}
+                            {% for category in categories %}
+                            <li data-href="{{category.slug}}">{{category.name}}</li>
+                            {% endfor %}
+                        {% endif %}
+                        </ul>
+                    </div>
+                    <div class="product-slider owl-carousel" id="men">
+                        <div class="product-item">
+                            <div class="pi-pic">
+                                <img src="{{ 'assets/img/products/women-1.jpg'|theme }}" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="pi-pic">
+                                <img src="{{ 'assets/img/products/women-2.jpg'|theme }}" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="pi-pic">
+                                <img src="{{ 'assets/img/products/women-3.jpg'|theme }}" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="pi-pic">
+                                <img src="{{ 'assets/img/products/women-4.jpg'|theme }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-slider owl-carousel d-none" id="women">
+                        <div class="product-item">
+                            <div class="pi-pic">
+                                <img src="{{ 'assets/img/products/women-1.jpg'|theme }}" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="pi-pic">
+                                <img src="{{ 'assets/img/products/women-2.jpg'|theme }}" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="pi-pic">
+                                <img src="{{ 'assets/img/products/women-3.jpg'|theme }}" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="pi-pic">
+                                <img src="{{ 'assets/img/products/women-4.jpg'|theme }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-slider owl-carousel d-none" id="kid">
+                        <div class="product-item">
+                            <div class="pi-pic">
+                                <img src="{{ 'assets/img/products/women-1.jpg'|theme }}" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="pi-pic">
+                                <img src="{{ 'assets/img/products/women-2.jpg'|theme }}" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="pi-pic">
+                                <img src="{{ 'assets/img/products/women-3.jpg'|theme }}" alt="">
+                            </div>
+                        </div>
+                        <div class="product-item">
+                            <div class="pi-pic">
+                                <img src="{{ 'assets/img/products/women-4.jpg'|theme }}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

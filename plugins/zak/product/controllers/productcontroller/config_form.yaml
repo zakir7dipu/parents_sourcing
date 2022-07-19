@@ -1,0 +1,11 @@
+name: ProductController
+modelClass: Zak\Product\Models\Products
+form: $/zak/product/models/products/product_fields.yaml
+defaultRedirect: zak/product/productcontroller
+create:
+    redirect: 'zak/product/productcontroller/update/:id'
+    redirectClose: zak/product/productcontroller
+update:
+    redirect: zak/product/productcontroller
+    redirectClose: zak/product/productcontroller
+preview: {  }

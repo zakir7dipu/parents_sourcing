@@ -1,0 +1,86 @@
+==
+<footer class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="footer-left">
+                        <h5 class="text-white"><u>Bangladesh office:</u></h5>
+                        <ul>
+                            <li>Parents sourcing ltd. Parents Tower House # 181 (1st floor), Road # East Tejturi Bazar, P.S.:Tejgaon, Dhaka-1215 Bangladesh</li>
+                            <li><u>Contact person:</u></li>
+                            <li>Mohamed Ali (Azam)</li>
+                            <li>Sadat Suman</li>
+                            <li><u>Contact no.:</u></li>
+                            <li><a style="text-decoration: none; color: white" href="https://wa.me/+8801712899307">+880 1712 899 307</a> (Whats App),</li>
+                            <li><a style="text-decoration: none; color: white" href="https://wa.me/+447914692932">+447914692932</a> (Whats App)</li>
+                            <li><a style="text-decoration: none; color: white" href="https://wa.me/+8801310469419">+8801310469419</a> (Whats App)</li>
+                            <li><u>Email:</u></li>
+                            <li>ali@parentssourcing.com,</li>
+                            <li>suman@parentssourcing.com,</li>
+                            <li>info@parentssourcing.com</li>
+                        </ul>
+                        <div class="footer-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-left">
+                        <h5 class="text-white"><u>UK office:</u></h5>
+                        <ul>
+                            <li>12 Tytler Gardens, Edinburgh, EH8
+                                8HS United Kingdom</li>
+                            <li><u>Contact person:</u></li>
+                            <li>Mohamed Ali (Azam)</li>
+                            <li><u>Contact no.:</u></li>
+                            <li><a style="text-decoration: none; color: white" href="https://wa.me/+447914692932">+447914692932</a> (Whats App)</li>
+                            <li><a style="text-decoration: none; color: white" href="https://wa.me/+8801310469419">+8801310469419</a> (Whats App)</li>
+                            <li><u>Email:</u></li>
+                            <li>ali@parentssourcing.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 offset-lg-1">
+                    <div class="footer-widget">
+                        <h5>Information</h5>
+                        <ul>
+                            <li><a href="/about-us">About Us</a></li>
+                            <li><a href="/contact-us">Contact</a></li>
+                            {% if categories|length %}
+                                {% for category in categories %}
+                                    <li><a href="{{category.slug}}">{{category.name}}</a></li>
+                                {% endfor %}
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="newslatter-item">
+                        <h5>Join Our Newsletter Now</h5>
+                        <p>Get E-mail updates about our latest shop and special offers.</p>
+                        <form action="#" class="subscribe-form">
+                            <input type="text" placeholder="Enter Your Mail">
+                            <button type="button">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-reserved">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="copyright-text">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved by <a href="/">parentssourcing.com</a>| This template is <i class="fa fa-heart-o" aria-hidden="true"></i> developed by zakir7dipu
+                        </div>
+                        <div class="payment-pic">
+<!--                             <img src="{{ 'assets/img/payment-method.png'|theme }}" alt=""> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>

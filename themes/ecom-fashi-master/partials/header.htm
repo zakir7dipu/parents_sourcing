@@ -1,0 +1,45 @@
+==
+<header class="header-section">
+        <div class="container d-xl-none d-lg-none d-md-none d-sm-block">
+            <div class="inner-header">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2">
+                        <div class="logo">
+                            <a href="/">
+                                <img src="/storage/app/media/parents-sourcing-ltd-1.png" alt="" style="width: 100px !important;">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <div class="container">
+                <div class="nav-depart">
+                    <div class="logo py-2">
+                        <a href="/">
+                            <img src="/storage/app/media/PARENTS%20SOURCING%20LTD.png" alt="" style="width: 100px !important;">
+                        </a>
+                    </div>
+                </div>
+                <nav class="nav-menu mobile-menu float-right">
+                    <ul>
+                        <li class="navItem"><a href="/">Home</a></li>
+                        <li class="navItem"><a href="/about-us">About Us</a></li>
+                        <li class="navItem hasDropdown"><a href="javascript:void(0)">Collection</a>
+                            <ul class="dropdown">
+                            {% if categories|length %}
+                                {% for category in categories %}
+                                <li class="navSubItem"><a href="{{category.slug}}">{{category.name}}</a></li>
+                                {% endfor %}
+                            {% endif %}
+                            </ul>
+                        </li>
+                        <li class="navItem"><a href="/contact-us">Contact</a></li>
+                    </ul>
+                </nav>
+                <div id="mobile-menu-wrap"></div>
+            </div>
+        </div>
+    </header>

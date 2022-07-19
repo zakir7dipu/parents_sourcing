@@ -1,0 +1,50 @@
+title = "About us"
+url = "/about-us"
+layout = "default"
+is_hidden = 0
+==
+<?php
+use Zak\Slider\Models\Slider;
+use Zak\Category\Models\Category;
+use Zak\Instaphoto\Models\Instagram;
+
+function onStart(){
+    $this['categories'] = Category::orderBy('index', 'asc')->where('status', true)->get();
+}
+?>
+==
+    <div class="breacrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <a href="/"><i class="fa fa-home"></i> Home</a>
+                        <span>About Us</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-lg-12">
+                 <h2 class="text-center aboutSectionh2"><span class="aboutSectionTitle">Who We Are?</span></h2>
+                <p class="text-justify">Since its emergence, Parents sourcing Ltd. aspires for excellence in its service and strives to achieve the goal by practicing openness and fairness in all its activities and work ardently in the domain of apparel/readymade garments sector and thereby inspiring compatibility in people, society and the environment and make
+                        the world a better place to live.</p>
+            </div>
+            <div class="col-lg-12">
+                <h2 class="text-center aboutSectionh2"><span class="aboutSectionTitle">Our Mission & Vision</span></h2>
+                <ul>
+                    <li>Be a driving force in the global market of garments by endorsing the advanced environment support technologies, to be followed by us and our patrons/buyers/agents/vendors/importers.</li>
+                    <li>Create an atmosphere for the readymade garments users, where people can use the product safely, comfortably, and take pleasure in having one such.</li>
+                    <li>Promote the garment products globally in a way that our
+                            patrons/buyers/agents/vendors/importers can have more patrons of their products.</li>
+                    <li>Be an organization that will be trusted and respected by all
+                            patrons/buyers/agents,endusersalike,inallouractivities.</li>
+                    <li>To be an organization where all of our patrons/buyers/agents / vendors/importers can easily get solution of all aspect in apparel/Ready made garments sector.</li>
+                </ul>
+                <p class="mt-3">We have achieved this through professionalism, best Quality, best merchandising planning, Commitment by utilizing our main business ethics'’Always with you on-time through Quality Merchandising as per your need''.</p>
+            </div>
+        </div>
+    </div>

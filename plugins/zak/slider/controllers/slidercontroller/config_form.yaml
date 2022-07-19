@@ -1,0 +1,10 @@
+name: SliderController
+form: $/zak/slider/models/slider/silder_fields.yaml
+modelClass: Zak\Slider\Models\Slider
+defaultRedirect: zak/slider/slidercontroller
+create:
+    redirect: 'zak/slider/slidercontroller/update/:id'
+    redirectClose: zak/slider/slidercontroller
+update:
+    redirect: zak/slider/slidercontroller
+    redirectClose: zak/slider/slidercontroller

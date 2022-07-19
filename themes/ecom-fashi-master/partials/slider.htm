@@ -1,0 +1,18 @@
+ <section class="hero-section">
+        <div class="hero-items owl-carousel">
+        {% if sliders|length %}
+            {% for slider in sliders %}
+            <div class="single-hero-items set-bg" data-setbg="{{slider.image}}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <span>{{slider.heading}}</span>
+                            <h1>{{slider.sub_heading}}</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    </section>

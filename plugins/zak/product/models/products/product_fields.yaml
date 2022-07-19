@@ -1,0 +1,16 @@
+fields:
+    category_id:
+        label: Category
+        options:
+            1: 'Men''s'
+            2: 'Women''s'
+            3: 'Kid''s'
+        showSearch: true
+        span: auto
+        required: 1
+        type: dropdown
+    image:
+        label: 'Product Image'
+        span: auto
+        required: 1
+        type: text

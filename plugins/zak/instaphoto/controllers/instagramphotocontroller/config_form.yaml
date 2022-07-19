@@ -1,0 +1,11 @@
+name: InstagramPhotoController
+modelClass: Zak\Instaphoto\Models\Instagram
+form: $/zak/instaphoto/models/instagram/insta_fields.yaml
+defaultRedirect: zak/instaphoto/instagramphotocontroller
+create:
+    redirect: 'zak/instaphoto/instagramphotocontroller/update/:id'
+    redirectClose: zak/instaphoto/instagramphotocontroller
+update:
+    redirect: zak/instaphoto/instagramphotocontroller
+    redirectClose: zak/instaphoto/instagramphotocontroller
+preview: {  }

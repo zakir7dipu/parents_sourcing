@@ -1,0 +1,15 @@
+columns:
+    index:
+        label: Index
+        type: number
+    name:
+        label: Name
+        type: text
+        searchable: true
+    image:
+        label: 'Image Link'
+        type: text
+        searchable: true
+    status:
+        label: Status
+        type: text

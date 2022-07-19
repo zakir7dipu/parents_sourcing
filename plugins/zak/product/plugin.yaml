@@ -1,0 +1,17 @@
+plugin:
+    name: 'zak.product::lang.plugin.name'
+    description: 'zak.product::lang.plugin.description'
+    author: zak
+    icon: wn-icon-archive
+    replaces: {  }
+permissions:
+    product_access:
+        tab: 'zak.product::lang.plugin.name'
+        label: 'Product Access'
+navigation:
+    main-menu-item:
+        label: Product
+        url: zak/product/productcontroller
+        icon: icon-archive
+        permissions:
+            - product_access

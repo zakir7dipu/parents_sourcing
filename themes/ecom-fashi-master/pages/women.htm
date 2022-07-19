@@ -1,0 +1,33 @@
+title = "Women's"
+url = "/women"
+layout = "default"
+is_hidden = 0
+==
+<?php
+use Zak\Category\Models\Category;
+use Zak\Product\Models\Products;
+
+function onStart(){
+    $this['categories'] = Category::orderBy('index', 'asc')->where('status', true)->get();
+    $this['products'] = Products::where('category_id', 2)->paginate(12);
+}
+?>
+==
+<!-- Breadcrumb Section Begin -->
+    <div class="breacrumb-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-text">
+                        <a href="/"><i class="fa fa-home"></i> Home</a>
+                        <span>Women's</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb Section Begin -->
+
+    <!-- Product Shop Section Begin -->
+        {% partial 'productshop' %}
+    <!-- Product Shop Section End -->

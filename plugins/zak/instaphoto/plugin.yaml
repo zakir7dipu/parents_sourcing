@@ -1,0 +1,17 @@
+plugin:
+    name: 'zak.instaphoto::lang.plugin.name'
+    description: 'zak.instaphoto::lang.plugin.description'
+    author: zak
+    icon: wn-icon-instagram
+    replaces: {  }
+navigation:
+    main-menu-item:
+        label: 'Instagram Photos'
+        url: zak/instaphoto/instagramphotocontroller
+        icon: icon-instagram
+        permissions:
+            - insta_access
+permissions:
+    insta_access:
+        tab: 'zak.instaphoto::lang.plugin.name'
+        label: 'Instagram Phone Access'

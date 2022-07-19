@@ -1,0 +1,91 @@
+title = "Home"
+url = "/"
+layout = "default"
+is_hidden = 0
+==
+<?php
+use Zak\Slider\Models\Slider;
+use Zak\Category\Models\Category;
+use Zak\Instaphoto\Models\Instagram;
+
+function onStart(){
+    $this['sliders'] = Slider::all();
+    $this['categories'] = Category::orderBy('index', 'asc')->where('status', true)->get();
+    $this['insta_photos'] = Instagram::take(6)->get();
+}
+?>
+==
+<!--Swiper-->
+    {% partial 'slider' %}
+
+    <!-- who we are Begin -->
+    <div class="spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 d-flex justify-content-center align-items-center">
+                    <div class="col-12">
+                        <h3 class="font-weight-bold">Who We Are</h3>
+                        <p class="text-justify mt-3 pr-2">Since itsemergence, Parents sourcing Ltd. aspires forexcellenceinits serviceand
+                            strives to achieve the goal by practicing openness and fairness in all its activities
+                            and work ardently in the domain of apparel/readymade garments sector and
+                            thereby inspiring compatibility in people, society and the environment and make
+                            the world a better place to live. <a href="/about-us"><small class="text-warning font-weight-bold">See more >>></small></a></p>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                    <iframe width="100%" height="300" src="https://www.youtube.com/embed/EnulhZuwz04" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- who we are Begin -->
+
+    <!-- Banner Section Begin -->
+    <div class="banner-section spad">
+        <div class="container-fluid">
+            <div class="row">
+            {% if categories|length %}
+                {% for category in categories %}
+                <div class="col-lg-4">
+                    <a href="{{category.slug}}">
+                        <div class="single-banner">
+                            <img src="{{category.image}}" alt="">
+                            <div class="inner-text">
+                                <h4>{{category.name}}</h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% endfor %}
+            {% endif %}
+            </div>
+        </div>
+    </div>
+    <!-- Banner Section End -->
+
+    <!-- filter gallery Section Begin -->
+    {% partial 'filtergallery' %}
+    <!-- filter gallery Section End -->
+
+    <!-- Instagram Section Begin -->
+        <div class="instagram-photo">
+        {% if insta_photos|length %}
+            {% for photo in insta_photos %}
+            <div class="insta-item set-bg" data-setbg="{{photo.image}}">
+                <div class="inside-text">
+                    <i class="ti-instagram"></i>
+                     {% if photo.insta_link %}
+                    <h5><a href="{{photo.insta_link}}">Colorlib Collection</a></h5>
+                    {% else %}
+                    <h5><a href="#">Colorlib Collection</a></h5>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+        </div>
+    <!-- Instagram Section End -->
+
+    <!-- Partner Logo Section Begin -->
+    {% partial 'partner' %}
+    <!-- Partner Logo Section End -->

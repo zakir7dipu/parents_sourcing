@@ -1,0 +1,12 @@
+title: ProductController
+modelClass: Zak\Product\Models\Products
+list: $/zak/product/models/products/product_columns.yaml
+recordUrl: 'zak/product/productcontroller/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 20
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

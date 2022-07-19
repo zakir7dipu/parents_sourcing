@@ -1,0 +1,17 @@
+plugin:
+    name: 'zak.category::lang.plugin.name'
+    description: 'zak.category::lang.plugin.description'
+    author: zak
+    icon: wn-icon-certificate
+    replaces: {  }
+permissions:
+    category_access:
+        tab: 'zak.category::lang.plugin.name'
+        label: 'Category Access'
+navigation:
+    main-menu-item:
+        label: Category
+        url: zak/category/categorycontroller
+        icon: icon-certificate
+        permissions:
+            - category_access

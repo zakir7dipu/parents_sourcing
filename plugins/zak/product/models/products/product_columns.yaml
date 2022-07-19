@@ -1,0 +1,5 @@
+columns:
+    image:
+        label: Product
+        type: text
+        searchable: true

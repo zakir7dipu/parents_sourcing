@@ -1,0 +1,11 @@
+fields:
+    image:
+        label: Image
+        span: auto
+        hidden: 0
+        required: 1
+        type: text
+    insta_link:
+        label: 'Instagram Link'
+        span: auto
+        type: text
