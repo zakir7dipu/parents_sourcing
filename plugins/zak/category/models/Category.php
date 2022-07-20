@@ -8,7 +8,7 @@ use Model;
 class Category extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
-    
+
     use \Winter\Storm\Database\Traits\SoftDelete;
 
     protected $dates = ['deleted_at'];
@@ -23,5 +23,9 @@ class Category extends Model
      * @var array Validation rules
      */
     public $rules = [
+    ];
+
+    public $hasMany = [
+        'product' => ['Zak\product\Models\Products', 'delete' => true]
     ];
 }

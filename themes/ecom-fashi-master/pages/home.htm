@@ -7,11 +7,25 @@ is_hidden = 0
 use Zak\Slider\Models\Slider;
 use Zak\Category\Models\Category;
 use Zak\Instaphoto\Models\Instagram;
+use Zak\Product\Models\Products;
+
+
 
 function onStart(){
+    $categories = Category::orderBy('index', 'asc')->where('status', true)->get();
     $this['sliders'] = Slider::all();
-    $this['categories'] = Category::orderBy('index', 'asc')->where('status', true)->get();
+    $this['categories'] = $categories;
     $this['insta_photos'] = Instagram::take(6)->get();
+    $filterProducts = [];
+    foreach ($categories as $category) {
+        $c = [];
+        $c["name"] = $category->name;
+        $c["slug"] = $category->slug;
+        $c['product'] = Products::where('category_id', $category->id)->orderBy("id","DESC")->take(5)->get();
+        $filterProducts[] = $c;
+    }
+    $this['filter_products'] = $filterProducts;
+
 }
 ?>
 ==

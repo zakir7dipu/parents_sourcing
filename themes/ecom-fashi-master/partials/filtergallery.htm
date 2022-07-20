@@ -17,74 +17,19 @@
                         {% endif %}
                         </ul>
                     </div>
-                    <div class="product-slider owl-carousel" id="men">
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{ 'assets/img/products/women-1.jpg'|theme }}" alt="">
+                    {% if categories|length %}
+                        {% for key, category in filter_products %}
+                            <div class="product-slider owl-carousel {{key>0?'d-none':''}}" id="{{category.slug}}">
+                                {% for product in category.product %}
+                                    <div class="product-item">
+                                        <div class="pi-pic">
+                                            <img src="{{ product.image }}" alt="">
+                                        </div>
+                                    </div>
+                                {% endfor %}
                             </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{ 'assets/img/products/women-2.jpg'|theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{ 'assets/img/products/women-3.jpg'|theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{ 'assets/img/products/women-4.jpg'|theme }}" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-slider owl-carousel d-none" id="women">
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{ 'assets/img/products/women-1.jpg'|theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{ 'assets/img/products/women-2.jpg'|theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{ 'assets/img/products/women-3.jpg'|theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{ 'assets/img/products/women-4.jpg'|theme }}" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="product-slider owl-carousel d-none" id="kid">
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{ 'assets/img/products/women-1.jpg'|theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{ 'assets/img/products/women-2.jpg'|theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{ 'assets/img/products/women-3.jpg'|theme }}" alt="">
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="pi-pic">
-                                <img src="{{ 'assets/img/products/women-4.jpg'|theme }}" alt="">
-                            </div>
-                        </div>
-                    </div>
+                        {% endfor %}
+                    {% endif %}
                 </div>
             </div>
         </div>

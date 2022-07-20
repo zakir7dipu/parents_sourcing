@@ -9,7 +9,7 @@ use Zak\Product\Models\Products;
 
 function onStart(){
     $this['categories'] = Category::orderBy('index', 'asc')->where('status', true)->get();
-    $this['products'] = Products::where('category_id', 2)->paginate(12);
+    $this['products'] = Products::where('category_id', 2)->orderBy("id","DESC")->paginate(12);
 }
 ?>
 ==
